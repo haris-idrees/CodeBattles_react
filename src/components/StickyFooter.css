@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sticky-footer{
+    background:#111;
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: 10px;
+    color:#fff;
+    position: fixed;
+    bottom: 0;
+}   
+
+.sticky-footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; 
+    height: 20px;  
+}
+
+.sticky-footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 2rem;
+    font-size: 20px;
+}

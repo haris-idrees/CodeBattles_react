@@ -1,0 +1,11 @@
+.signupHero{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../4.jpg');
+    background-size: cover;
+    background-position: cover;
+}
+
+.signupBody{
+    height: 650px;
+    width: 100%;
+}

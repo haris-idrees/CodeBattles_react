@@ -1,0 +1,22 @@
+.abt{
+  margin-top: 100px;
+}
+body {
+    background: white;
+    margin-top: 1000px;
+    padding: 100px;
+  }
+  .explain {
+    padding-bottom: 50px;
+  }
+  .contact {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  
+  .column1 {
+    margin-left: 0px;
+
+  }

@@ -62,19 +62,19 @@ const Navbar = () => {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-             <Link to='/home' className='nav-links'>
+              <a href="#home" className='nav-links' onClick={closeMobileMenu}>
                 Home
-             </Link>
+              </a>
             </li>
             <li className='nav-item'>
-            <Link to='/home'className='nav-links'>
+              <a href="#about" className='nav-links' onClick={(event) => handleScrollToSection(event, 'about')}>
                 About
-             </Link>
+              </a>
             </li>
             <li className='nav-item'>
-                <Link to='/home'className='nav-links'>
-                    Contact Us
-                </Link>
+              <a href="#contact" className='nav-links' onClick={closeMobileMenu}>
+                Contact Us
+              </a>
             </li>
             {name && (
               <>
@@ -107,7 +107,51 @@ const Navbar = () => {
           </ul>
         </div>
 
-      
+        {/* <h2 className="logo">
+          <Link to="/home" style={{ textDecoration: 'none', color: 'white' }}>
+            Code <span>Battles </span>
+            <GiBiceps />
+          </Link>
+        </h2>
+        <ul>
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
+          <li>
+            <a href="/About">About</a>
+          </li>
+          <li>
+            <a href="/Contact">Contact us</a>
+          </li>
+          {name && (
+            <>
+              <li>
+                <span>{name}</span>
+              </li>
+              <li>
+                <Link to="/timeline">Timeline</Link>
+              </li>
+              <li>
+                <div className='navbar-buttons'>
+                <button type="button" onClick={handleLogout}>
+                  Logout
+                </button>
+                </div>
+              </li>
+            </>
+          )}
+          {!name && (
+            <li>
+              <div className='navbar-buttons'>
+              <Link to="/signup">
+              <button type="button">
+                  Login
+                </button>
+              </Link>
+              </div>
+            </li>
+          )}
+        </ul> */}
       </nav>
     </>
   );
