@@ -1,5 +1,6 @@
 import './App.css';
 import Home from './components/Home';
+import Footer from './components/Footer';
 import RegisterPage from './components/RegisterPage';
 import Signup from './components/Signup';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -34,6 +35,7 @@ function App() {
             <Route path="/compiler/:problem_name" element={<Compiler />} />
           </Routes>
         </BrowserRouter>
+
     </>
   );
 }
