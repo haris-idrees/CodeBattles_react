@@ -28,8 +28,11 @@ export default class APIServices {
       });
   }
 
-  static getAllProblems() {
-    return fetch('http://127.0.0.1:8000/problems')
+  static getAllProblems(body) {
+    const userId = sessionStorage.getItem('id');
+    const url = `http://127.0.0.1:8000/get_unsolved_problems?userId=${userId}`;
+
+    return fetch(url)
       .then(response => response.json())
       .then(data => {
         // Process the data or return it as-is
@@ -44,11 +47,11 @@ export default class APIServices {
 
   static getUserPosts(user_id) {
     let url = 'http://127.0.0.1:8000/getpostsByUser/';
-  
+
     if (user_id) {
       url += `?user_id=${user_id}`;
     }
-  
+
     return fetch(url)
       .then(response => response.json())
       .then(data => {
@@ -71,7 +74,7 @@ export default class APIServices {
       body: JSON.stringify(body)
 
     }).then(resp => resp.json())
-  }   
+  }
 
   static UpdateUser(user_id, body) {
     return fetch(`http://127.0.0.1:8000/users/${user_id}/`, {
@@ -82,9 +85,8 @@ export default class APIServices {
       body: JSON.stringify(body)
     }).then(resp => resp.json());
   }
-  
-  static LoginAdmin(body)
-  {
+
+  static LoginAdmin(body) {
     return fetch(`http://127.0.0.1:8000/login_admin/`, {
       'method': 'POST',
       headers: {

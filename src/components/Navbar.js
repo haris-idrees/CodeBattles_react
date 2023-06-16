@@ -67,22 +67,18 @@ const Navbar = () => {
              </Link>
             </li>
             <li className='nav-item'>
-            <Link to='/home'className='nav-links'>
-                About
+            <Link to='/allproblems'className='nav-links'>
+                Problems
              </Link>
             </li>
-            <li className='nav-item'>
-                <Link to='/home'className='nav-links'>
-                    Contact Us
-                </Link>
-            </li>
+            
             {name && (
               <>
                 <li className='nav-item'>
                   <Link to='/profile' className='nav-links' onClick={closeMobileMenu}>{name}</Link>
                 </li>
                 <li className='nav-item'>
-                  <Link to="/timeline" className='nav-links'>Timeline</Link>
+                  <Link to="/timeline" className='nav-links'>Feed</Link>
                 </li>
                 <li className='nav-item'>
                   <div className='navbar-buttons'>

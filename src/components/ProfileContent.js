@@ -206,17 +206,7 @@ export default function ProfileContent() {
                                     <></>
                             }
                             <button id="update_profile_button" onClick={() => { setVisible(true) }}>Update Picture</button><br /><br />
-                            <ul class="about">
-                                <li>
-                                    <span>4,073</span>Friends
-                                </li>
-                                <li>
-                                    <span>322</span>Posts
-                                </li>
-                                <li>
-                                    <span>200,543</span>Groups
-                                </li>
-                            </ul>
+                            
 
                             <div class="content">
                                 <p>
@@ -231,9 +221,7 @@ export default function ProfileContent() {
                                     <li>
                                         <i class="fab fa-twitter"></i>
                                     </li>
-                                    <i class="fab fa-pinterest"></i>
-                                    <i class="fab fa-facebook"></i>
-                                    <i class="fab fa-dribbble"></i>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -244,7 +232,7 @@ export default function ProfileContent() {
                                         <a href="">Feed</a>
                                     </li>
                                     <li>
-                                        <a href="">Gallery</a>
+                                        <a href="/allproblems">Problems Solved</a>
                                     </li>
                                     <li>
                                         <a href="">groups</a>

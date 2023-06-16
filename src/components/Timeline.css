@@ -20,6 +20,10 @@
     align-items: center;
 }
 
+.post_css{
+    padding: 70px;
+}
+
 .Postsbody{
     width: 600px;
     height: auto;

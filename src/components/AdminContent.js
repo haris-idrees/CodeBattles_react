@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import APIServices from '../APIServices';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function AdminContent() {
     const [users, setUsers] = useState([]);
@@ -19,6 +20,9 @@ function AdminContent() {
     return (
         
         <div className="container">
+            <Link to={'http://127.0.0.1:8000/problems/'}>
+            <button>Upload Problem</button>
+            </Link>
             <h1>Users</h1>
             <table className='table table-hover table-responsive'>
                 <thead className='table-success'>

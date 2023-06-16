@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import APIServices from '../APIServices';
 import { CloudinaryImage } from '@cloudinary/url-gen';
 import { AdvancedImage } from '@cloudinary/react';
+import FriendSuggestion from './friendSuggestion';
 
 function Timeline() {
   useEffect(() => {
@@ -26,23 +27,26 @@ function Timeline() {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="post_css">
+      <div >
         <center>
           <div >
             <CreatePost />
           </div>
+          
         </center>
         {/* <ProfilePost /><br />
           <ProfilePost /><br />
           <ProfilePost /><br /> */}
+          <div className="post_css">
         {posts.map(post => (
 
-          <div className="f-card" key={post.id}>
+          <div  className="f-card" key={post.id}>
             <div className="header">
               <div className="options">
                 <i className="fa fa-chevron-down"></i>
               </div>
-              <AdvancedImage cldImg={post.user_img} class="co-logo"/>
+              <img src={`https://res.cloudinary.com/drvo4uxiv/image/upload/${post.user_img}`}  className="co-logo"/>
+
               <div className="co-name">
                 <a href="#">{post.user_name}</a>
               </div>
@@ -52,26 +56,22 @@ function Timeline() {
             </div>
             <div className="content">
               <p>
-               {post.post_text}
+                {post.post_text}
               </p>
             </div>
 
             <div className="reference">
-            <AdvancedImage cldImg={new CloudinaryImage(post.post_image, {cloudName: 'drvo4uxiv'})} className="reference-thumb"/>
+              <AdvancedImage cldImg={new CloudinaryImage(post.post_image, { cloudName: 'drvo4uxiv' })} className="reference-thumb" />
               <div className="reference-content">
-                <div className="reference-title">
-                  A quick and simple image placeholder service. | PLACEHOLDER.it
-                </div>
-                <div className="reference-subtitle">
-                  How does it work? Just put your image size after our URL and
-                  you'll get a placeholder.
-                </div>
-                <div className="reference-font">placeholder.it</div>
+                
+                
+                
               </div>
             </div>
             <div className="social">
               <div className="social-content"></div>
               <div className="social-buttons">
+                
                 <span>
                   <i className="fa fa-thumbs-up"></i>Like
                 </span>
@@ -82,6 +82,7 @@ function Timeline() {
             </div>
           </div>
         ))}
+        </div>
       </div>
       <StickyFooter />
     </div>

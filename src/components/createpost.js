@@ -34,7 +34,10 @@ const CreatePost = () => {
       console.log(response_data['public_id']);
       alert('Post Picture Added!');
       setResponseData(response_data);
+      setUserId(sessionStorage.getItem('id'))
       setPostImage(response_data['public_id']);
+      console.log(user_id, post_text, num_of_likes, num_of_dislikes, response_data['public_id'],
+      user_img,user_name)
       APIServices.insertPost(user_id, post_text, num_of_likes, num_of_dislikes, response_data['public_id'],
       user_img,user_name)
         .then((resp) => {
